@@ -1,5 +1,5 @@
-import React from 'react'
-import { string } from 'prop-types'
+import React from "react";
+import { string } from "prop-types";
 import Octicon, {
   Comment,
   Check,
@@ -18,15 +18,15 @@ import Octicon, {
   GitPullRequest,
   Bookmark,
   IssueOpened,
-  IssueClosed
-} from '@primer/octicons-react'
+  IssueClosed,
+} from "@primer/octicons-react";
 
 const iconMap = {
   push: RepoPush,
   pull_request: GitPullRequest,
   label: Bookmark,
-  'issues.opened': IssueOpened,
-  'issues.closed': IssueClosed,
+  "issues.opened": IssueOpened,
+  "issues.closed": IssueClosed,
   issue_comment: Comment,
   status: Check,
   fork: RepoForked,
@@ -42,26 +42,23 @@ const iconMap = {
   project: Project,
   project_card: Note,
   project_column: Project,
-  repository_vulnerability_alert: Stop
-}
+  repository_vulnerability_alert: Stop,
+};
 
-export default function EventIcon ({
-  action,
-  event
-}) {
-  let icon
+export default function EventIcon({ action, event }) {
+  let icon;
   if (action && iconMap[`${event}.${action}`]) {
-    icon = iconMap[`${event}.${action}`]
+    icon = iconMap[`${event}.${action}`];
   } else if (iconMap[event]) {
-    icon = iconMap[event]
+    icon = iconMap[event];
   } else {
-    icon = Package
+    icon = Package;
   }
 
-  return <Octicon icon={icon} />
+  return <Octicon icon={icon} />;
 }
 
 EventIcon.propTypes = {
   action: string,
-  event: string
-}
+  event: string,
+};

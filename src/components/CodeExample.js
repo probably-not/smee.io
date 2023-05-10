@@ -1,4 +1,4 @@
-import React from 'react'
+import React from "react";
 
 const code = `<span class="hljs-keyword">const</span> SmeeClient = <span class="hljs-built_in">require</span>(<span class="hljs-string">'smee-client'</span>)
 
@@ -11,10 +11,8 @@ const code = `<span class="hljs-keyword">const</span> SmeeClient = <span class="
 <span class="hljs-keyword">const</span> events = smee.start()
 
 <span class="hljs-comment">// Stop forwarding events</span>
-events.close()`
+events.close()`;
 
-export default function CodeExample () {
-  return (
-    <pre dangerouslySetInnerHTML={{ __html: code }} />
-  )
+export default function CodeExample() {
+  return <pre dangerouslySetInnerHTML={{ __html: code }} />;
 }

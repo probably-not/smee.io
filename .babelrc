@@ -10,7 +10,14 @@
   "env": {
     "test": {
       "presets": [
-        ["@babel/env", { "exclude": ["transform-classes"] }],
+        [
+          "@babel/env",
+          {
+            "exclude": [
+              "transform-classes"
+            ]
+          }
+        ],
         "@babel/react"
       ]
     }
