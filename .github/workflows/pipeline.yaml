@@ -44,4 +44,3 @@ jobs:
             probablynot/smee.io:${{ github.sha }}
           platforms: |
             linux/amd64
-            linux/arm64
