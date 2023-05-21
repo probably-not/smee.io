@@ -55,7 +55,10 @@ export default class ListItem extends Component {
     const { item, last, pinned, togglePinned } = this.props;
 
     const event = item["x-github-event"];
-    const payload = item.body;
+    let payload = item.body;
+    if (typeof payload === "string") {
+      payload = JSON.parse(payload);
+    }
     const id = item["x-github-delivery"] || item.timestamp;
 
     return (
